@@ -2,10 +2,15 @@ package br.com.petz.cliente.domain;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.util.UUID;
 
 import org.hibernate.validator.constraints.br.CPF;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
@@ -20,7 +25,10 @@ import lombok.Setter;
 @Entity
 public class Cliente {
 	
-	private Long idCliente;
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	@Column(name = "id", updatable = false, unique = true, nullable = false)
+	private UUID idCliente;
 	
 	@NotBlank
 	private String nomeCompelto;
@@ -46,7 +54,6 @@ public class Cliente {
 			String telefone, Sexo sexo, @NotNull LocalDate dataNascimento, @CPF String cpf,
 			LocalDateTime dataHoraCadastro, @NotBlank Boolean aceitatermos) {
 		super();
-		this.idCliente = idCliente;
 		this.nomeCompelto = nomeCompelto;
 		this.email = email;
 		this.celular = celular;
