@@ -41,11 +41,10 @@ public class Cliente {
 	private LocalDate dataNascimento;
 	@CPF
 	private String cpf;
-	private LocalDateTime dataHoraCadastro;
-	private LocalDateTime dataMomentoUltimaAlteracao;
-	
 	@NotBlank
 	private Boolean aceitatermos;
+	private LocalDateTime dataHoraCadastro;
+	private LocalDateTime dataMomentoUltimaAlteracao;
 	
 	
 	public Cliente(@NotBlank String nomeCompelto, @NotBlank @Email String email, @NotBlank String celular,
