@@ -6,6 +6,7 @@ import java.util.UUID;
 
 import org.hibernate.validator.constraints.br.CPF;
 
+import br.com.petz.cliente.application.api.ClienteRequest;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -29,7 +30,7 @@ public class Cliente {
 	private UUID idCliente;
 	
 	@NotBlank
-	private String nomeCompelto;
+	private String nomeCompleto;
 	@NotBlank
 	@Email
 	private String email;
@@ -41,30 +42,24 @@ public class Cliente {
 	private LocalDate dataNascimento;
 	@CPF
 	private String cpf;
-	@NotBlank
+	@NotNull
 	private Boolean aceitatermos;
 	private LocalDateTime dataHoraCadastro;
 	private LocalDateTime dataMomentoUltimaAlteracao;
-	
-	
-	public Cliente(@NotBlank String nomeCompelto, @NotBlank @Email String email, @NotBlank String celular,
-			String telefone, Sexo sexo, @NotNull LocalDate dataNascimento, @CPF String cpf,
-			LocalDateTime dataHoraCadastro, @NotBlank Boolean aceitatermos) {
-		super();
-		this.nomeCompelto = nomeCompelto;
-		this.email = email;
-		this.celular = celular;
-		this.telefone = telefone;
-		this.sexo = sexo;
-		this.dataNascimento = dataNascimento;
-		this.cpf = cpf;
+
+	public Cliente(ClienteRequest clienteRequest) {
+		
+		this.nomeCompleto = clienteRequest.getNomeCompleto();
+		this.email = clienteRequest.getEmail();
+		this.celular = clienteRequest.getCelular();
+		this.telefone = clienteRequest.getTelefone();
+		this.sexo = clienteRequest.getSexo();
+		this.dataNascimento = clienteRequest.getDataNascimento();
+		this.cpf = clienteRequest.getCpf();
 		this.dataHoraCadastro = LocalDateTime.now();
-		this.aceitatermos = aceitatermos;
+		this.aceitatermos = clienteRequest.getAceitatermos();
+		
 	}
 	
 	
-	
-	
-	
-
 }
