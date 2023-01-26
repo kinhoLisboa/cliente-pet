@@ -14,7 +14,7 @@ import lombok.extern.log4j.Log4j2;
 @RequiredArgsConstructor
 public class ClienteApplicationService implements ClienteService {
 	
-	private ClienteRepository clienteRepository;
+	private final ClienteRepository clienteRepository;
 
 	@Override
 	public ClienteResponse criaCliente(ClienteRequest clienteRequest) {

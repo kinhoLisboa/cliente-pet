@@ -1,0 +1,77 @@
+[33mcommit c21773fae17f6f5189d26a9c3d9a79d43ab1a854[m[33m ([m[1;36mHEAD -> [m[1;32mfeature/implementa-api-cliente[m[33m, [m[1;31morigin/feature/implementa-api-cliente[m[33m)[m
+Author: Danifleikson Buriti Lisboa <danifleikson@hotmail.com>
+Date:   Wed Jan 25 20:10:25 2023 -0300
+
+     Corrigindo a entidade clientre e implementanmdo a camada repository.
+
+[33mcommit e2b9231485158d2c95504ba4539aa795b23782a5[m
+Author: Danifleikson Buriti Lisboa <danifleikson@hotmail.com>
+Date:   Wed Jan 25 19:07:28 2023 -0300
+
+     Criando request e response.
+
+[33mcommit ce2eeb9b84f34c938251ee6b8401fe74c8c35f50[m
+Author: Danifleikson Buriti Lisboa <danifleikson@hotmail.com>
+Date:   Wed Jan 25 18:58:34 2023 -0300
+
+     Implementando o service do cliente.
+
+[33mcommit c7ac468248320285004f55b51c95a6b5e9873009[m
+Author: Danifleikson Buriti Lisboa <danifleikson@hotmail.com>
+Date:   Tue Jan 24 21:11:07 2023 -0300
+
+     Implementanmdpo controller.
+
+[33mcommit 0a57d61d60bb8176f109eeaa35b8e35a623529bf[m
+Author: Danifleikson Buriti Lisboa <danifleikson@hotmail.com>
+Date:   Tue Jan 24 20:25:26 2023 -0300
+
+    Implementa contrato da api.
+
+[33mcommit 9dd4547b5f9dec65cfc3af81ba6e179a859cf60e[m
+Author: Danifleikson Buriti Lisboa <danifleikson@hotmail.com>
+Date:   Tue Jan 24 19:30:07 2023 -0300
+
+     Ajusrtando o id do clinte.
+
+[33mcommit db8f94f5a67dca1aaf2086ef193f46f8ce262dbf[m[33m ([m[1;31morigin/feature/configura-projeto[m[33m, [m[1;32mfeature/configura-projeto[m[33m)[m
+Author: Danifleikson Buriti Lisboa <danifleikson@hotmail.com>
+Date:   Tue Jan 24 18:41:08 2023 -0300
+
+    Implementando o dominio de cliente.
+
+[33mcommit 409801293df16bafb40df21e3af0843db8fe18a7[m
+Author: Danifleikson Buriti Lisboa <danifleikson@hotmail.com>
+Date:   Mon Jan 23 21:56:55 2023 -0300
+
+     Adicionando a dependecia do H2 no pom xml.
+
+[33mcommit 50c8a9467c164d5fe729502de47885d147074c6d[m
+Author: Danifleikson Buriti Lisboa <danifleikson@hotmail.com>
+Date:   Mon Jan 23 21:54:45 2023 -0300
+
+     Adicionando as config do H2 no application.
+
+[33mcommit 6e47963009b67b44bd12d4b3dede3098c113babd[m
+Author: Danifleikson Buriti Lisboa <danifleikson@hotmail.com>
+Date:   Mon Jan 23 21:37:28 2023 -0300
+
+     Testatando a api.
+
+[33mcommit 20347d3cc32497ff1537985bfff3845303e5b0b7[m
+Author: Danifleikson Buriti Lisboa <danifleikson@hotmail.com>
+Date:   Mon Jan 23 21:18:47 2023 -0300
+
+     Configurando o context-path.
+
+[33mcommit 28b6e95a98f396bd136a16313f7877fcc03d7829[m
+Author: Danifleikson Buriti Lisboa <danifleikson@hotmail.com>
+Date:   Mon Jan 23 21:07:30 2023 -0300
+
+    Renomenando o application para yml.
+
+[33mcommit 691afb424f3137104982e405976bb45269930823[m[33m ([m[1;31morigin/develop[m[33m, [m[1;32mmaster[m[33m, [m[1;32mdevelop[m[33m)[m
+Author: Danifleikson Buriti Lisboa <danifleikson@hotmail.com>
+Date:   Mon Jan 23 20:11:21 2023 -0300
+
+    Inicializando o projeto petz.
