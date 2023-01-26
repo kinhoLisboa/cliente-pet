@@ -29,8 +29,9 @@ public class ClienteApiController implements ClienteApi {
 	@Override
 	public List<ListClienteResponse> getTodosCliente() {
 		log.info("[Inicia] ClienteApiController - GetTodosCliente");
+		 List<ListClienteResponse> clientes = clienteService.buscaTodosCliente();
 		log.info("[Finaliza]ClienteApiController - GetTodosCliente");
-		return null;
+		return clientes;
 	}
 
 }
