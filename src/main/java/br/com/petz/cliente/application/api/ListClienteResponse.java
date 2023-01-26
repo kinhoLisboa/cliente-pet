@@ -19,8 +19,17 @@ public class ListClienteResponse {
 	private String telefone;
 	
 	public static List<ListClienteResponse> convert(List<Cliente> clientes) {
-		// TODO Auto-generated method stub
-		return null;
+		
+		
+		return clientes.stream().map(ListClienteResponse::new).toList();
+	}
+
+	public ListClienteResponse(Cliente cliente) {
+		super();
+		this.nomeCompleto = cliente.getNomeCompleto();
+		this.email = cliente.getEmail();
+		this.celular = cliente.getCelular();
+		this.telefone = cliente.getTelefone();
 	}
 	
 
