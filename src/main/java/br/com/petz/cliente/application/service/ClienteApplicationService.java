@@ -1,9 +1,11 @@
 package br.com.petz.cliente.application.service;
 
 import java.util.List;
+import java.util.UUID;
 
 import org.springframework.stereotype.Service;
 
+import br.com.petz.cliente.application.api.ClienteDetalhadoResponse;
 import br.com.petz.cliente.application.api.ClienteRequest;
 import br.com.petz.cliente.application.api.ClienteResponse;
 import br.com.petz.cliente.application.api.ListClienteResponse;
@@ -33,6 +35,14 @@ public class ClienteApplicationService implements ClienteService {
 		List<Cliente> clientes = clienteRepository.listarClientes();
 		log.info("[Finaliza] ClienteApplicationService - Clibuscaente");
 		return ListClienteResponse.convert(clientes);
+	}
+
+	@Override
+	public ClienteDetalhadoResponse detalha(UUID clienteId) {
+		log.info("[Inicia] ClienteApiController - detalha");
+		Cliente cliente	= clienteRepository.buscaId(clienteId);
+		log.info("[Finaliza] ClienteApiController -detalha");
+		return new ClienteDetalhadoResponse (cliente);
 	}
 
 }
