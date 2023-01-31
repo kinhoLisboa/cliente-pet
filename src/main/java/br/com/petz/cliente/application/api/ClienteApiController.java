@@ -39,8 +39,9 @@ public class ClienteApiController implements ClienteApi {
 	public ClienteDetalhadoResponse buscarClientePorId(UUID clienteId) {
 		log.info("[Inicia] ClienteApiController - buscarClientePorId");
 		log.info("ClienteId ()", clienteId);
+		var detalhaCliente = clienteService.detalha(clienteId);
 		log.info("[Finaliza] ClienteApiController - buscarClientePorId");
-		return null;
+		return detalhaCliente;
 	}
 
 }
