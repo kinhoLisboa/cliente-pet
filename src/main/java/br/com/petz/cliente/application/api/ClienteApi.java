@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.UUID;
 
 import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -26,8 +27,11 @@ public interface ClienteApi {
 	@ResponseStatus(code = HttpStatus.OK)
 	List<ListClienteResponse> getTodosCliente() ;
 	
-	@GetMapping
+	@GetMapping(value ="/{clienteId}")
 	@ResponseStatus(code = HttpStatus.OK)
-	@RequestMapping("/{clienteId}")
 	ClienteDetalhadoResponse buscarClientePorId(@PathVariable  UUID clienteId) ;
+	
+	@DeleteMapping(value ="/{clienteId}")
+	@ResponseStatus(code = HttpStatus.NO_CONTENT)
+	 void deletaClientePorId(@PathVariable  UUID clienteId) ;
 }

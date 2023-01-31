@@ -45,4 +45,13 @@ public class ClienteApplicationService implements ClienteService {
 		return new ClienteDetalhadoResponse (cliente);
 	}
 
+	@Override
+	public void excluirClienteId(UUID clienteId) {
+		log.info("[Inicia] ClienteApiController - deletaClientePorId");
+		Cliente cliente	= clienteRepository.buscaId(clienteId);
+		clienteRepository.deletaCliente(cliente);
+		log.info("[Finaliza] ClienteApiController - deletaClientePorId");
+		
+	}
+
 }
