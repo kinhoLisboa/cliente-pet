@@ -6,6 +6,7 @@ import java.util.UUID;
 import org.springframework.stereotype.Service;
 
 import br.com.petz.pet.application.api.ListPetResponse;
+import br.com.petz.pet.application.api.PetAlteracaoRequest;
 import br.com.petz.pet.application.api.PetDetalhadoDoClienteResponse;
 import br.com.petz.pet.application.api.PetRequest;
 import br.com.petz.pet.application.api.PetResponse;
@@ -21,6 +22,8 @@ public interface PetService {
 	PetDetalhadoDoClienteResponse detalhaPetDoCliente(UUID clienteId, UUID petId);
 
 	void delelaPetDoCliente(UUID clienteId, UUID petId);
+
+	void alteraPetDoCliente(UUID clienteId, UUID petId, @Valid PetAlteracaoRequest petAteracaoRequest);
 
 	
 

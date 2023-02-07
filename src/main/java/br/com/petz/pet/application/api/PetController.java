@@ -6,7 +6,6 @@ import java.util.UUID;
 import org.springframework.web.bind.annotation.RestController;
 
 import br.com.petz.pet.application.service.PetService;
-import br.com.petz.pet.domain.Pet;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
@@ -48,6 +47,13 @@ public class PetController implements PetAPI {
 		log.info("[Inicial] PetController - PetDetalhadoDoClienteResponse- deletaPetDoCliente");
 		petService.delelaPetDoCliente(clienteId, petId);
 		log.info("[Finaliza] PetController - PetDetalhadoDoClienteResponse- deletaPetDoCliente");
+	}
+
+	@Override
+	public void patchPet(UUID clienteId, UUID petId, @Valid PetAlteracaoRequest petAteracaoRequest) {
+		log.info("[Inicial] PetController - PetDetalhadoDoClienteResponse- patchPet");
+		petService.alteraPetDoCliente(clienteId,petId,petAteracaoRequest);
+		log.info("[Finaliza] PetController - PetDetalhadoDoClienteResponse- patchPet");
 	}
 
 }
