@@ -44,6 +44,16 @@ public class PetInfraRepository implements PetRepository {
 		return petDoCliente;
 	}
 
+	@Override
+	public void deletaPet(Pet pet) {
+		log.info("[Inicial] PetInfraRepository - deletaPet ");
+		petSpringJpa.delete(pet);
+		log.info("[Finaliza] PetInfraRepository - deletaPet ");
+		
+	}
+
+
+
 
 
 	

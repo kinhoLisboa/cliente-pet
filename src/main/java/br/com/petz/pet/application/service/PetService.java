@@ -20,6 +20,8 @@ public interface PetService {
 
 	PetDetalhadoDoClienteResponse detalhaPetDoCliente(UUID clienteId, UUID petId);
 
+	void delelaPetDoCliente(UUID clienteId, UUID petId);
+
 	
 
 }
